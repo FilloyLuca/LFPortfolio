@@ -44,19 +44,6 @@ Ce portfolio a été conçu pour présenter :
 
 ---
 
-## 📂 Structure du portfolio
-📁 Portfolio
-├── index.html
-├── style.css
-├── 📁 cv
-├── 📁 images
-├── 📄 pages projets
-├── 📄 pages stages
-└── 📄 veille technologique (IA jeux vidéo)
-
-
----
-
 ## ✨ Fonctionnalités
 
 ✅ Design moderne et responsive  
