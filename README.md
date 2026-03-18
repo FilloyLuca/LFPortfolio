@@ -23,7 +23,6 @@
 
 🎓 Étudiant en **BTS SIO - option SLAM**  
 💡 Passionné par le **développement web** et les **nouvelles technologies**  
-🚀 Objectif : devenir développeur full-stack
 
 Ce portfolio a été conçu pour présenter :
 - mes compétences techniques
