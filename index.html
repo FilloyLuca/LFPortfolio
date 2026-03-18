@@ -162,46 +162,58 @@
 <!-- Overlay -->
 <div id="modal-overlay" onclick="closeModal()"></div>
 
-<!-- Modal 1 : Gestion des stocks -->
-<div class="project-modal" id="modal-stocks">
+<!-- Modal : API Series -->
+<div class="project-modal" id="modal-api-series">
   <button class="modal-close" onclick="closeModal()">&times;</button>
   <div class="modal-inner">
+    
     <div class="modal-left">
       <div class="modal-eyebrow">2025 &mdash; Projet BTS</div>
-      <h2 class="modal-title">Application de gestion des stocks</h2>
+      
+      <h2 class="modal-title">API REST - Gestion de séries</h2>
+      
       <p class="modal-desc">
-        Application web permettant de gerer l'inventaire d'une PME de facon complete et intuitive.
-        Le systeme integre un <strong>CRUD complet</strong> sur les produits, des <strong>alertes automatiques</strong>
-        lorsqu'un article passe sous le seuil minimum, ainsi qu'un <strong>export PDF</strong> des rapports
-        d'inventaire.
+        Développement d'une <strong>API REST</strong> permettant de gérer une base de données de séries.
+        L'application permet de manipuler les données via des endpoints (CRUD) pour les séries,
+        les genres et les saisons.
       </p>
+      
       <p class="modal-desc">
-        L'interface dynamique en JavaScript permet des mises a jour en temps reel sans rechargement
-        de page. La base de donnees MySQL a ete modelisee via un MCD/MLD rigoureux avant implementation.
+        Le projet a été réalisé en <strong>Java avec Spring Boot</strong> et utilise une base de données
+        <strong>MySQL / MariaDB</strong>. Les données sont automatiquement générées au démarrage
+        grâce à un fichier <strong>import.sql</strong>, et la base est recréée à chaque exécution.
       </p>
+
       <div class="modal-tags">
-        <span class="tag">PHP</span><span class="tag">MySQL</span>
-        <span class="tag">JavaScript</span><span class="tag purple">MCD/MLD</span>
+        <span class="tag">Java</span>
+        <span class="tag">Spring Boot</span>
+        <span class="tag">REST API</span>
+        <span class="tag">MySQL</span>
+        <span class="tag purple">Gradle</span>
         <span class="tag purple">CRUD</span>
       </div>
+
       <a href="#" class="modal-github-btn" target="_blank" rel="noopener">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="18"/>
         Voir sur GitHub
       </a>
     </div>
+
     <div class="modal-right">
       <div class="modal-preview">
-        <div class="modal-preview-icon">&#128230;</div>
-        <div class="modal-preview-label">Gestion des stocks</div>
+        <div class="modal-preview-icon">&#127909;</div>
+        <div class="modal-preview-label">API Series</div>
+        
         <div class="modal-features">
-          <div class="modal-feature"><span class="feature-dot"></span>CRUD produits complet</div>
-          <div class="modal-feature"><span class="feature-dot"></span>Alertes de seuil automatiques</div>
-          <div class="modal-feature"><span class="feature-dot"></span>Export PDF des rapports</div>
-          <div class="modal-feature"><span class="feature-dot"></span>Interface dynamique JS</div>
-          <div class="modal-feature"><span class="feature-dot"></span>Modelisation MCD/MLD</div>
+          <div class="modal-feature"><span class="feature-dot"></span>API REST complète</div>
+          <div class="modal-feature"><span class="feature-dot"></span>CRUD séries / genres / saisons</div>
+          <div class="modal-feature"><span class="feature-dot"></span>Base auto-créée</div>
+          <div class="modal-feature"><span class="feature-dot"></span>Données injectées (import.sql)</div>
+          <div class="modal-feature"><span class="feature-dot"></span>Spring Boot + Gradle</div>
         </div>
       </div>
     </div>
+
   </div>
 </div>
 
