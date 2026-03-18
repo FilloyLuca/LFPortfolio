@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stage 1 – Formulaire d'inscription Judo Club Almont</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style-stage1.css"/>
+  <!-- Favicon dynamique selon theme -->
+  <link id="favicon" rel="icon" type="image/svg+xml" href="favicon-dark.svg"/>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-back">← Retour au portfolio</a>
+  <span class="nav-tag">STAGE 1</span>
+  <button id="theme-toggle" aria-label="Changer de thème">
+    <span class="icon-dark">&#9789; Sombre</span>
+    <span class="icon-light">&#9728; Clair</span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-kanji">柔</div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Stage en entreprise — 2025</div>
+    <h1>Formulaire d'inscription<br/><span>Judo Club Almont</span></h1>
+    <div class="hero-meta">
+      <span class="meta-pill">Laravel</span>
+      <span class="meta-pill">PHP</span>
+      <span class="meta-pill">MySQL</span>
+      <span class="meta-pill">Blade</span>
+      <span class="meta-pill">Tailwind CSS</span>
+    </div>
+  </div>
+</div>
+
+<!-- DOWNLOAD BANNER -->
+<div class="download-banner">
+  <div class="download-banner-text">
+    <strong>Documentation du projet disponible</strong> — Consignes de développement & guide d'installation
+  </div>
+  <div class="download-links">
+    <a href="ProjetJudoClubAlmont.pdf" download class="dl-btn dl-btn-primary">⬇ Consignes Laravel</a>
+    <a href="TutoJudoAlmont.txt" download class="dl-btn dl-btn-outline">⬇ Guide d'installation</a>
+  </div>
+</div>
+
+<div class="content">
+
+  <!-- CONTEXTE -->
+  <div class="section fade-in">
+    <div class="section-label">01 — Contexte</div>
+    <h2>Présentation du projet</h2>
+    <p>
+      Dans le cadre de mon stage de BTS SIO SLAM, j'ai participé au développement
+      d'un site web pour le <strong>Judo Club Almont</strong>. Ma mission principale
+      consistait à concevoir et intégrer un <strong>formulaire d'inscription en ligne</strong>
+      permettant aux futurs membres de rejoindre le club.
+    </p>
+    <p>
+      Le projet a été développé avec le framework <strong>Laravel</strong>, en suivant
+      l'architecture MVC (Modèle – Vue – Contrôleur). L'environnement de développement
+      local utilisé était <strong>Laragon</strong>, et le versioning a été géré via
+      <strong>GitHub</strong> avec une convention de branches par fonctionnalité.
+    </p>
+    <div class="tech-grid">
+      <span class="tech-tag red">Laravel (PHP)</span>
+      <span class="tech-tag red">Blade (templates)</span>
+      <span class="tech-tag cyan">HTML5 / CSS3</span>
+      <span class="tech-tag amber">Tailwind CSS</span>
+      <span class="tech-tag green">MySQL</span>
+      <span class="tech-tag purple">Laragon</span>
+      <span class="tech-tag purple">GitHub</span>
+    </div>
+  </div>
+
+  <!-- ENVIRONNEMENT -->
+  <div class="section fade-in">
+    <div class="section-label">02 — Environnement de développement</div>
+    <h2>Mise en place du projet</h2>
+    <p>
+      Avant tout développement, l'environnement local a été configuré selon les
+      consignes fournies. <strong>Laragon</strong> a été utilisé comme solution
+      tout-en-un (Apache, MySQL, PHP) pour faire tourner Laravel en local.
+    </p>
+
+    <div class="cmd-list">
+      <div class="cmd-row">
+        <span class="cmd-code">composer install</span>
+        <span class="cmd-desc">Installation des dépendances PHP</span>
+      </div>
+      <div class="cmd-row">
+        <span class="cmd-code">npm install && npm run dev</span>
+        <span class="cmd-desc">Installation et compilation des assets CSS/JS</span>
+      </div>
+      <div class="cmd-row">
+        <span class="cmd-code">php artisan key:generate</span>
+        <span class="cmd-desc">Génération de la clé de l'application</span>
+      </div>
+      <div class="cmd-row">
+        <span class="cmd-code">php artisan migrate</span>
+        <span class="cmd-desc">Création des tables en base de données</span>
+      </div>
+      <div class="cmd-row">
+        <span class="cmd-code">php artisan serve</span>
+        <span class="cmd-desc">Lancement du serveur local (127.0.0.1:8000)</span>
+      </div>
+    </div>
+
+    <div class="env-box">
+      <div class="env-label">⚙ Configuration — fichier .env</div>
+      <div class="env-row">
+        <span class="env-key">DB_DATABASE</span>
+        <span class="env-val">judoalmont</span>
+      </div>
+      <div class="env-row">
+        <span class="env-key">DB_USERNAME</span>
+        <span class="env-val">root</span>
+      </div>
+      <div class="env-row">
+        <span class="env-key">DB_PASSWORD</span>
+        <span class="env-val">(vide par défaut avec Laragon)</span>
+      </div>
+      <div class="env-row">
+        <span class="env-key">APP_URL</span>
+        <span class="env-val">http://judoalmont.test</span>
+      </div>
+      <div class="env-warn">⚠ Ce fichier n'est jamais versionné sur GitHub (données sensibles).</div>
+    </div>
+  </div>
+
+  <!-- ARCHITECTURE MVC -->
+  <div class="section fade-in">
+    <div class="section-label">03 — Architecture MVC</div>
+    <h2>Organisation du code Laravel</h2>
+    <p>
+      Le projet suit le pattern <strong>MVC</strong> de Laravel : les routes dirigent
+      les requêtes vers les contrôleurs, qui interagissent avec les modèles
+      et retournent des vues Blade à l'utilisateur.
+    </p>
+
+    <div class="mvc-diagram">
+      <div class="mvc-col">
+        <div class="mvc-col-label route">Routes</div>
+        <div class="mvc-item"><span>GET</span> /inscription</div>
+        <div class="mvc-item"><span>POST</span> /inscription</div>
+      </div>
+      <div class="mvc-col">
+        <div class="mvc-col-label ctrl">Controller</div>
+        <div class="mvc-item"><span>InscriptionController</span></div>
+        <div class="mvc-item">→ <span>create()</span></div>
+        <div class="mvc-item">→ <span>store()</span></div>
+      </div>
+      <div class="mvc-col">
+        <div class="mvc-col-label model">Model</div>
+        <div class="mvc-item"><span>Membre</span></div>
+        <div class="mvc-item">fillable[]</div>
+        <div class="mvc-item">→ table membres</div>
+      </div>
+      <div class="mvc-col">
+        <div class="mvc-col-label view">Vue Blade</div>
+        <div class="mvc-item"><span>inscription.blade.php</span></div>
+        <div class="mvc-item">Formulaire HTML</div>
+        <div class="mvc-item">Erreurs validation</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BASE DE DONNÉES -->
+  <div class="section fade-in">
+    <div class="section-label">04 — Base de données</div>
+    <h2>Migration & structure de la table</h2>
+    <p>
+      La table <code>membres</code> a été créée via une <strong>migration Laravel</strong>,
+      permettant de versionner la structure de la base de données et de la
+      reproduire facilement sur n'importe quel environnement.
+    </p>
+
+    <table class="migration-table">
+      <thead>
+        <tr>
+          <th>Champ</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>id</td>
+          <td>bigIncrements</td>
+          <td>Clé primaire auto-incrémentée</td>
+        </tr>
+        <tr>
+          <td>nom</td>
+          <td>string</td>
+          <td>Nom de famille du membre</td>
+        </tr>
+        <tr>
+          <td>prenom</td>
+          <td>string</td>
+          <td>Prénom du membre</td>
+        </tr>
+        <tr>
+          <td>email</td>
+          <td>string, unique</td>
+          <td>Adresse e-mail (identifiant unique)</td>
+        </tr>
+        <tr>
+          <td>telephone</td>
+          <td>string, nullable</td>
+          <td>Numéro de téléphone</td>
+        </tr>
+        <tr>
+          <td>date_naissance</td>
+          <td>date</td>
+          <td>Date de naissance du membre</td>
+        </tr>
+        <tr>
+          <td>categorie</td>
+          <td>string</td>
+          <td>Catégorie d'âge (poussin, benjamin, junior…)</td>
+        </tr>
+        <tr>
+          <td>timestamps</td>
+          <td>datetime</td>
+          <td><code>created_at</code> / <code>updated_at</code> (auto)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="code-filename">database/migrations/create_membres_table.php</div>
+    <div class="code-block"><span class="cls">Schema</span>::<span class="fn">create</span>(<span class="str">'membres'</span>, <span class="kw">function</span> (<span class="cls">Blueprint</span> <span class="var">$table</span>) {
+    <span class="var">$table</span>-><span class="fn">id</span>();
+    <span class="var">$table</span>-><span class="fn">string</span>(<span class="str">'nom'</span>);
+    <span class="var">$table</span>-><span class="fn">string</span>(<span class="str">'prenom'</span>);
+    <span class="var">$table</span>-><span class="fn">string</span>(<span class="str">'email'</span>)-><span class="fn">unique</span>();
+    <span class="var">$table</span>-><span class="fn">string</span>(<span class="str">'telephone'</span>)-><span class="fn">nullable</span>();
+    <span class="var">$table</span>-><span class="fn">date</span>(<span class="str">'date_naissance'</span>);
+    <span class="var">$table</span>-><span class="fn">string</span>(<span class="str">'categorie'</span>);
+    <span class="var">$table</span>-><span class="fn">timestamps</span>();
+});</div>
+  </div>
+
+  <!-- FORMULAIRE -->
+  <div class="section fade-in">
+    <div class="section-label">05 — Formulaire & validation</div>
+    <h2>Développement du formulaire</h2>
+
+    <p>
+      Le formulaire d'inscription a été intégré dans une <strong>vue Blade</strong>
+      et connecté à un contrôleur Laravel gérant la validation des données
+      et l'insertion en base.
+    </p>
+
+    <div class="flow">
+      <div class="flow-step">
+        <div class="flow-num">01</div>
+        <div class="flow-content">
+          <div class="flow-title">Affichage du formulaire</div>
+          <div class="flow-desc">La route <code>GET /inscription</code> appelle <code>InscriptionController@create()</code> qui retourne la vue Blade avec le formulaire HTML.</div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">02</div>
+        <div class="flow-content">
+          <div class="flow-title">Soumission & validation</div>
+          <div class="flow-desc">La route <code>POST /inscription</code> déclenche <code>store()</code>. Laravel valide les champs (<code>required</code>, <code>email</code>, <code>unique</code>, <code>date</code>...) et renvoie les erreurs à la vue si nécessaire.</div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">03</div>
+        <div class="flow-content">
+          <div class="flow-title">Insertion en base</div>
+          <div class="flow-desc">Si la validation passe, <code>Membre::create($validated)</code> insère le nouveau membre dans la table <code>membres</code> via Eloquent ORM.</div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">04</div>
+        <div class="flow-content">
+          <div class="flow-title">Redirection & confirmation</div>
+          <div class="flow-desc">L'utilisateur est redirigé avec un <strong>message de succès</strong> affiché via la session flash Laravel (<code>session('success')</code>).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="code-filename">app/Http/Controllers/InscriptionController.php</div>
+    <div class="code-block"><span class="kw">public function</span> <span class="fn">store</span>(<span class="cls">Request</span> <span class="var">$request</span>)
+{
+    <span class="var">$validated</span> = <span class="var">$request</span>-><span class="fn">validate</span>([
+        <span class="str">'nom'</span>           => <span class="str">'required|string|max:255'</span>,
+        <span class="str">'prenom'</span>        => <span class="str">'required|string|max:255'</span>,
+        <span class="str">'email'</span>         => <span class="str">'required|email|unique:membres'</span>,
+        <span class="str">'telephone'</span>     => <span class="str">'nullable|string'</span>,
+        <span class="str">'date_naissance'</span> => <span class="str">'required|date'</span>,
+        <span class="str">'categorie'</span>     => <span class="str">'required|string'</span>,
+    ]);
+
+    <span class="cls">Membre</span>::<span class="fn">create</span>(<span class="var">$validated</span>);
+
+    <span class="kw">return</span> <span class="fn">redirect</span>()-><span class="fn">route</span>(<span class="str">'inscription'</span>)
+        -><span class="fn">with</span>(<span class="str">'success'</span>, <span class="str">'Inscription envoyée !'</span>);
+}</div>
+  </div>
+
+  <!-- VERSIONING -->
+  <div class="section fade-in">
+    <div class="section-label">06 — Versioning</div>
+    <h2>Workflow Git & GitHub</h2>
+    <p>
+      Le projet a été versionné sur un <strong>dépôt GitHub privé</strong>.
+      Chaque fonctionnalité a été développée sur une <strong>branche dédiée</strong>,
+      conformément aux consignes du projet.
+    </p>
+    <div class="code-block"><span class="cm"># Création d'une branche pour la fonctionnalité</span>
+git checkout -b <span class="str">feature/formulaire-inscription</span>
+
+<span class="cm"># Commit du travail</span>
+git add .
+git commit -m <span class="str">"feat: ajout formulaire inscription membre"</span>
+
+<span class="cm"># Push et création de la Pull Request</span>
+git push origin <span class="str">feature/formulaire-inscription</span></div>
+    <p>Une <strong>Pull Request</strong> a ensuite été soumise vers la branche <code>main</code> pour validation par le responsable du projet.</p>
+  </div>
+
+  <!-- BILAN -->
+  <div class="section fade-in">
+    <div class="section-label">07 — Bilan</div>
+    <h2>Compétences mobilisées</h2>
+    <div class="skills-list">
+      <div class="skill-item-row">Framework Laravel (MVC)</div>
+      <div class="skill-item-row">Templates Blade</div>
+      <div class="skill-item-row">Migrations & Eloquent ORM</div>
+      <div class="skill-item-row">Validation de formulaires</div>
+      <div class="skill-item-row">Configuration environnement .env</div>
+      <div class="skill-item-row">Commandes Artisan</div>
+      <div class="skill-item-row">Gestion de branches Git / GitHub</div>
+      <div class="skill-item-row">Pull Request & workflow collaboratif</div>
+      <div class="skill-item-row">Intégration HTML/CSS avec Tailwind</div>
+      <div class="skill-item-row">Base de données MySQL (Laragon)</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+  /* Theme toggle */
+  (function() {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var head = document.head;
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.id  = 'theme-css-sub';
+    var saved = localStorage.getItem('portfolio-theme') || 'dark';
+    link.href = saved === 'dark' ? 'style-dark.css' : 'style-light.css';
+    head.appendChild(link);
+    btn.addEventListener('click', function() {
+      var cur = localStorage.getItem('portfolio-theme') || 'dark';
+      var next = cur === 'dark' ? 'light' : 'dark';
+      link.href = next === 'dark' ? 'style-dark.css' : 'style-light.css';
+      localStorage.setItem('portfolio-theme', next);
+      var fav = document.getElementById('favicon');
+      if (fav) fav.href = next === 'dark' ? 'favicon-dark.svg' : 'favicon-light.svg';
+    });
+  })();
+</script>
+</body>
+</html>

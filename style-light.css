@@ -1,0 +1,56 @@
+/* ════════════════════════════════════════════
+   THÈME CLAIR — Crème / Désert / Chaud
+   Portfolio BTS SIO SLAM
+   ════════════════════════════════════════════ */
+
+:root {
+  --bg:       #f5efe6;
+  --surface:  #ede4d8;
+  --surface2: #e3d8c8;
+  --accent:   #b5601a;
+  --accent2:  #8b4513;
+  --text:     #2c1e10;
+  --muted:    #8a7060;
+  --border:   rgba(181, 96, 26, 0.2);
+  --nav-bg:   rgba(245, 239, 230, 0.92);
+  --hero-grid-color: rgba(181, 96, 26, 0.06);
+  --glow1:    rgba(205, 133, 63, 0.2);
+  --glow2:    rgba(181, 96, 26, 0.1);
+  --hero-desc-color: #6b5040;
+  --scrollbar-thumb: var(--accent2);
+  --tag-bg:   rgba(181, 96, 26, 0.1);
+  --tag-color: var(--accent2);
+  --tag-border: rgba(181, 96, 26, 0.3);
+  --tag-purple-bg: rgba(139, 69, 19, 0.08);
+  --tag-purple-color: #7a3b0f;
+  --tag-purple-border: rgba(139, 69, 19, 0.25);
+  --badge-bg: rgba(181, 96, 26, 0.08);
+  --badge-border: rgba(181, 96, 26, 0.3);
+  --skill-bar-bg: var(--surface2);
+  --skill-fill: linear-gradient(90deg, var(--accent), var(--accent2));
+  --contact-glow: rgba(181, 96, 26, 0.07);
+  --btn-primary-hover-bg: #cc7422;
+  --btn-primary-hover-shadow: rgba(181, 96, 26, 0.35);
+}
+
+/* ─── ADJUSTMENTS LIGHT ─── */
+body::before { opacity: 0.25; }
+
+.hero-name span {
+  background: linear-gradient(135deg, #b5601a 0%, #8b4513 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── TOGGLE ICON ─── */
+#theme-toggle { background: var(--surface); border: 1px solid var(--border); color: var(--text); }
+#theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+#theme-toggle .icon-dark  { display: none; }
+#theme-toggle .icon-light { display: inline; }
+
+/* Icones sombres (GitHub, Linux...) rendues visibles en theme clair */
+.skill-icon-item img[alt="GitHub"],
+.skill-icon-item img[alt="Linux"] {
+  filter: invert(0.4) sepia(0.3) saturate(0.8);
+}

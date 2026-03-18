@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b5601a"/>
+      <stop offset="100%" stop-color="#8b4513"/>
+    </linearGradient>
+  </defs>
+  <!-- Fond crème -->
+  <rect width="32" height="32" rx="6" fill="#f5efe6"/>
+  <!-- Bordure accent -->
+  <rect width="32" height="32" rx="6" fill="none" stroke="#b5601a" stroke-width="1" opacity="0.5"/>
+  <!-- Losange extérieur -->
+  <polygon points="16,3 29,16 16,29 3,16" fill="url(#g)" opacity="0.15"/>
+  <!-- Losange principal -->
+  <polygon points="16,6 26,16 16,26 6,16" fill="url(#g)"/>
+  <!-- Losange intérieur (cutout) -->
+  <polygon points="16,11 21,16 16,21 11,16" fill="#f5efe6"/>
+  <!-- Point central -->
+  <circle cx="16" cy="16" r="2" fill="#b5601a"/>
+</svg>

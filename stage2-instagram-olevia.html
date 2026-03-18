@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stage 2 – Analyse Concours Instagram Olevia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style-stage2.css"/>
+  <!-- Favicon dynamique selon theme -->
+  <link id="favicon" rel="icon" type="image/svg+xml" href="favicon-dark.svg"/>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-back">← Retour au portfolio</a>
+  <span class="nav-tag">STAGE 2</span>
+  <button id="theme-toggle" aria-label="Changer de thème">
+    <span class="icon-dark">&#9789; Sombre</span>
+    <span class="icon-light">&#9728; Clair</span>
+  </button>
+</nav>
+
+<div class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Stage en entreprise — 2025/2026</div>
+    <h1>Analyse Concours<br/><span>Instagram Olevia</span></h1>
+    <div class="hero-meta">
+      <span class="meta-pill">Python</span>
+      <span class="meta-pill">BeautifulSoup</span>
+      <span class="meta-pill">MySQL</span>
+      <span class="meta-pill">HTML Scraping</span>
+      <span class="meta-pill">Live Share</span>
+    </div>
+  </div>
+</div>
+
+<!-- DOWNLOAD BANNER -->
+<div class="download-banner">
+  <div class="download-banner-text">
+    <strong>Comptes rendus de stage disponibles</strong> — Journaux de développement (Jours 2 et 3) + Présentation projet
+  </div>
+  <div class="download-links">
+    <a href="CompteRenduJour2.pdf" download class="dl-btn dl-btn-primary">⬇ Jour 2</a>
+    <a href="CompteRenduJour3.pdf" download class="dl-btn dl-btn-outline">⬇ Jour 3</a>
+    <a href="Presentation_Projet_AnalyseConcours.pdf" download class="dl-btn dl-btn-outline">⬇ Présentation</a>
+  </div>
+</div>
+
+<div class="content">
+
+  <!-- CONTEXTE -->
+  <div class="section fade-in">
+    <div class="section-label">01 — Contexte</div>
+    <h2>Présentation du projet</h2>
+    <p>
+      Dans le cadre de la communication digitale de la marque <strong>Olevia</strong>, un concours
+      Instagram a été mis en place afin de gagner en <strong>e-réputation</strong> et d'accroître
+      l'engagement de la communauté. L'objectif technique du stage était de concevoir un système
+      automatisé d'analyse des participations, vérifiant l'éligibilité de chaque concurrent
+      selon trois critères précis.
+    </p>
+    <p>
+      Le projet a été réalisé <strong>en binôme</strong> via <em>VS Code Live Share</em> :
+      Nolan assurait la conception et la gestion de la base de données MySQL, tandis que
+      le développement du script d'analyse Python était mené conjointement.
+    </p>
+    <div class="tech-grid">
+      <span class="tech-tag cyan">Python 3</span>
+      <span class="tech-tag cyan">BeautifulSoup4</span>
+      <span class="tech-tag purple">MySQL</span>
+      <span class="tech-tag purple">mysql-connector-python</span>
+      <span class="tech-tag amber">HTML (source Instagram)</span>
+      <span class="tech-tag green">VS Code Live Share</span>
+      <span class="tech-tag green">GitHub (dépôt privé)</span>
+    </div>
+  </div>
+
+  <!-- CRITÈRES -->
+  <div class="section fade-in">
+    <div class="section-label">02 — Règles du concours</div>
+    <h2>Les trois critères d'éligibilité</h2>
+    <div class="criteria-grid">
+      <div class="criterion-card c1">
+        <div class="criterion-num">CRITÈRE 01</div>
+        <div class="criterion-title">Abonnement</div>
+        <div class="criterion-desc">Être abonné au compte Instagram de la marque Olevia.</div>
+        <div class="criterion-val bool">true / false</div>
+      </div>
+      <div class="criterion-card c2">
+        <div class="criterion-num">CRITÈRE 02</div>
+        <div class="criterion-title">Like</div>
+        <div class="criterion-desc">Avoir liké la publication du concours.</div>
+        <div class="criterion-val bool">true / false</div>
+      </div>
+      <div class="criterion-card c3">
+        <div class="criterion-num">CRITÈRE 03</div>
+        <div class="criterion-title">Mentions</div>
+        <div class="criterion-desc">Avoir mentionné au moins 3 amis (@) dans un commentaire.</div>
+        <div class="criterion-val bool">true / false</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARCHITECTURE -->
+  <div class="section fade-in">
+    <div class="section-label">03 — Architecture technique</div>
+    <h2>Stack & flux de données</h2>
+
+    <div class="arch-flow">
+      <div class="arch-box accent">
+        <div class="arch-box-top">Source</div>
+        <div class="arch-box-name">HTML Instagram</div>
+      </div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-box accent">
+        <div class="arch-box-top">Analyse</div>
+        <div class="arch-box-name">BeautifulSoup</div>
+      </div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-box purple">
+        <div class="arch-box-top">Logique</div>
+        <div class="arch-box-name">Python</div>
+      </div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-box purple">
+        <div class="arch-box-top">Stockage</div>
+        <div class="arch-box-name">MySQL</div>
+      </div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-box green">
+        <div class="arch-box-top">Résultat</div>
+        <div class="arch-box-name">Gagnant 🏆</div>
+      </div>
+    </div>
+
+    <h3>// Structure de la base de données</h3>
+    <div class="sql-grid">
+      <div class="sql-table">
+        <div class="sql-table-head">subscribe</div>
+        <div class="sql-field"><span>id</span><span class="sql-pk">PK AUTO</span></div>
+        <div class="sql-field"><span>pseudo</span><span class="sql-type">VARCHAR UNIQUE</span></div>
+        <div class="sql-field"><span>date_collecte</span><span class="sql-type">DATETIME</span></div>
+      </div>
+      <div class="sql-table">
+        <div class="sql-table-head">likepost</div>
+        <div class="sql-field"><span>id</span><span class="sql-pk">PK AUTO</span></div>
+        <div class="sql-field"><span>pseudo</span><span class="sql-type">VARCHAR UNIQUE</span></div>
+        <div class="sql-field"><span>date_collecte</span><span class="sql-type">DATETIME</span></div>
+      </div>
+      <div class="sql-table">
+        <div class="sql-table-head">mention</div>
+        <div class="sql-field"><span>id</span><span class="sql-pk">PK AUTO</span></div>
+        <div class="sql-field"><span>pseudo</span><span class="sql-type">VARCHAR UNIQUE</span></div>
+        <div class="sql-field"><span>message_1</span><span class="sql-type">VARCHAR</span></div>
+        <div class="sql-field"><span>message_2</span><span class="sql-type">VARCHAR</span></div>
+        <div class="sql-field"><span>message_3</span><span class="sql-type">VARCHAR</span></div>
+        <div class="sql-field"><span>date_collecte</span><span class="sql-type">DATETIME</span></div>
+      </div>
+    </div>
+    <p style="font-size:0.83rem;">Un utilisateur MySQL dédié (<code style="color:var(--accent);font-family:var(--mono)">analyse_user</code>) a été créé avec des droits limités à la base <code style="color:var(--accent);font-family:var(--mono)">scraping</code>, conformément aux bonnes pratiques de sécurité.</p>
+  </div>
+
+  <!-- DÉVELOPPEMENT -->
+  <div class="section fade-in">
+    <div class="section-label">04 — Développement</div>
+    <h2>Analyse des trois critères</h2>
+
+    <h3>// Analyse des abonnés</h3>
+    <p>
+      Première difficulté majeure : distinguer les <strong>abonnés réels</strong> des comptes
+      suggérés par Instagram. Plusieurs stratégies ont été testées (filtrage par mots-clés
+      "Suivi(e)", "Suivre", attribut <code style="font-family:var(--mono);color:var(--accent)">tabindex="0"</code>...)
+      avant de trouver un critère fiable.
+    </p>
+    <div class="prob-sol">
+      <div class="ps-box warn">
+        <div class="ps-label warn-color">⚠ Problème</div>
+        <div class="ps-text">Instagram génère son contenu <strong>dynamiquement via JavaScript</strong>. Le HTML statique ne contient pas de structure claire liant un pseudo à son statut d'abonné.</div>
+      </div>
+      <div class="ps-box ok">
+        <div class="ps-label ok-color">✓ Solution retenue</div>
+        <div class="ps-text">Détection du bouton <strong>"Supprimer"</strong> (présent uniquement chez les abonnés réels, contre "Suivre" pour les suggestions). Critère stable et fiable.</div>
+      </div>
+    </div>
+
+    <h3>// Analyse des likes</h3>
+    <p>
+      La liste complète des comptes ayant liké une publication n'est <strong>pas présente dans le HTML statique</strong>
+      (chargement dynamique). Une approche alternative a été développée.
+    </p>
+    <div class="ps-box ok" style="margin: 0.8rem 0;">
+      <div class="ps-label ok-color">✓ Approche adoptée</div>
+      <div class="ps-text">Croisement des pseudos abonnés déjà identifiés avec le contenu HTML du post : si le pseudo est détecté dans la page de la publication, il est considéré comme ayant liké. Résultat stocké en booléen.</div>
+    </div>
+
+    <h3>// Analyse des commentaires & mentions</h3>
+    <p>
+      Vérification qu'un commentaire contient au moins <strong>3 mentions @ distinctes</strong>,
+      avec règles de validation strictes.
+    </p>
+    <div class="code-block">
+<span class="cm"># Règles de validation des mentions</span>
+<span class="cm"># La mention doit commencer par @</span>
+<span class="cm"># Contenir au moins 1 caractère après @</span>
+<span class="cm"># L'auteur ne peut pas se mentionner lui-même</span>
+<span class="cm"># Pas de doublons (set)</span>
+<span class="cm"># Minimum 3 mentions valides requises</span>
+
+mentions = re.<span class="fn">findall</span>(<span class="str">r'@(\w+)'</span>, texte)
+mentions_valides = [m <span class="kw">for</span> m <span class="kw">in</span> mentions
+                    <span class="kw">if</span> m != auteur <span class="kw">and</span> len(m) > 0]
+mentions_uniques = <span class="fn">list</span>(<span class="fn">set</span>(mentions_valides))
+
+<span class="kw">if</span> len(mentions_uniques) >= 3:
+    cursor.<span class="fn">execute</span>(<span class="str">"INSERT IGNORE INTO mention ..."</span>)
+    </div>
+
+    <h3>// Tirage au sort final</h3>
+    <p>
+      Une requête SQL avec <strong>INNER JOIN</strong> sur les trois tables croise les critères.
+      Un script Python sélectionne ensuite aléatoirement (<code style="font-family:var(--mono);color:var(--accent)">ORDER BY RAND()</code>)
+      le gagnant parmi les participants éligibles et affiche son pseudo ainsi que ses trois recommandations.
+    </p>
+  </div>
+
+  <!-- LIMITES -->
+  <div class="section fade-in">
+    <div class="section-label">05 — Limites & décisions</div>
+    <h2>Contraintes techniques rencontrées</h2>
+    <p>
+      Instagram repose sur un <strong>rendu dynamique côté client</strong> (JavaScript). Il est
+      donc impossible d'extraire de manière exhaustive et fiable toutes les données
+      (likes, abonnés complets) depuis un simple HTML statique. Cette limitation ne relève
+      pas d'une erreur de programmation, mais d'une contrainte structurelle de la plateforme.
+    </p>
+    <div class="ps-box warn" style="margin: 1rem 0;">
+      <div class="ps-label warn-color">⚠ Décision prise</div>
+      <div class="ps-text">
+        Pour respecter le cadre <strong>légal, technique et pédagogique</strong>, le scraping direct
+        d'Instagram en conditions réelles n'a pas été poursuivi. Le projet repose sur un
+        <strong>HTML simulé et contrôlé</strong> représentant fidèlement la structure logique attendue,
+        tout en démontrant la méthodologie et les compétences techniques mobilisées.
+      </div>
+    </div>
+    <p>Outil <strong>Playwright</strong> également étudié comme alternative pour le rendu dynamique (ouverture d'un vrai navigateur + exécution JavaScript), mais non déployé en production pour les mêmes raisons.</p>
+  </div>
+
+  <!-- BILAN -->
+  <div class="section fade-in">
+    <div class="section-label">06 — Bilan</div>
+    <h2>Résultats & compétences</h2>
+
+    <div class="status-list" style="margin-bottom:1.8rem;">
+      <div class="status-row"><span class="status-badge done">✔ OK</span><span class="status-label">Analyse HTML des abonnés</span></div>
+      <div class="status-row"><span class="status-badge done">✔ OK</span><span class="status-label">Analyse des likes (approche croisée)</span></div>
+      <div class="status-row"><span class="status-badge done">✔ OK</span><span class="status-label">Analyse des mentions @ (commentaires)</span></div>
+      <div class="status-row"><span class="status-badge done">✔ OK</span><span class="status-label">Insertion MySQL — 3 tables</span></div>
+      <div class="status-row"><span class="status-badge done">✔ OK</span><span class="status-label">Jointure SQL & sélection des éligibles</span></div>
+      <div class="status-row"><span class="status-badge done">✔ OK</span><span class="status-label">Tirage au sort automatisé</span></div>
+      <div class="status-row"><span class="status-badge done">✔ OK</span><span class="status-label">Versioning GitHub (dépôt privé)</span></div>
+    </div>
+
+    <div class="skills-list">
+      <div class="skill-item-row">Python & BeautifulSoup</div>
+      <div class="skill-item-row">Conception & requêtes SQL</div>
+      <div class="skill-item-row">Modélisation de BDD (3 tables)</div>
+      <div class="skill-item-row">Analyse HTML avancée</div>
+      <div class="skill-item-row">Gestion des doublons SQL</div>
+      <div class="skill-item-row">Travail collaboratif (Live Share)</div>
+      <div class="skill-item-row">Versionning Git / GitHub</div>
+      <div class="skill-item-row">Analyse critique des limites</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+  /* Theme toggle */
+  (function() {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var head = document.head;
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.id  = 'theme-css-sub';
+    var saved = localStorage.getItem('portfolio-theme') || 'dark';
+    link.href = saved === 'dark' ? 'style-dark.css' : 'style-light.css';
+    head.appendChild(link);
+    btn.addEventListener('click', function() {
+      var cur = localStorage.getItem('portfolio-theme') || 'dark';
+      var next = cur === 'dark' ? 'light' : 'dark';
+      link.href = next === 'dark' ? 'style-dark.css' : 'style-light.css';
+      localStorage.setItem('portfolio-theme', next);
+      var fav = document.getElementById('favicon');
+      if (fav) fav.href = next === 'dark' ? 'favicon-dark.svg' : 'favicon-light.svg';
+    });
+  })();
+</script>
+</body>
+</html>

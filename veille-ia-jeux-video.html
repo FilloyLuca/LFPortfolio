@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Veille – L'IA dans le développement du jeu vidéo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style-veille.css"/>
+  <!-- Favicon dynamique selon theme -->
+  <link id="favicon" rel="icon" type="image/svg+xml" href="favicon-dark.svg"/>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-back">← Retour au portfolio</a>
+  <span class="nav-tag">VEILLE TECHNO</span>
+  <button id="theme-toggle" aria-label="Changer de thème">
+    <span class="icon-dark">&#9789; Sombre</span>
+    <span class="icon-light">&#9728; Clair</span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <!-- Grille pixel déco -->
+  <div class="hero-pixel" id="pixelGrid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Veille technologique — 2025/2026</div>
+    <h1>L'IA dans le<br/><span>développement du jeu vidéo</span></h1>
+    <p class="hero-intro">
+      En 2025, l'intelligence artificielle n'est plus un gadget expérimental dans les studios de jeux vidéo :
+      elle est devenue un outil de production à part entière, qui transforme aussi bien le gameplay
+      que le pipeline de création des développeurs.
+    </p>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">87%</div>
+        <div class="hero-stat-label">des développeurs<br/>utilisent l'IA</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">20%</div>
+        <div class="hero-stat-label">des jeux Steam 2025<br/>intègrent l'IA gén.</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">+700%</div>
+        <div class="hero-stat-label">de jeux IA sur Steam<br/>en 12 mois</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+  <!-- USAGES -->
+  <div class="section fade-in">
+    <div class="section-label">01 — Usages</div>
+    <h2>Comment l'IA est utilisée dans le jeu vidéo</h2>
+    <p class="section-intro">
+      L'intelligence artificielle intervient à <strong>toutes les étapes</strong> du développement d'un jeu,
+      de la conception des assets jusqu'au comportement des personnages en jeu.
+    </p>
+    <div class="usages-grid">
+      <div class="usage-card">
+        <div class="usage-icon">🤖</div>
+        <div class="usage-title">PNJ intelligents & dialogues</div>
+        <div class="usage-desc">
+          Les personnages non-joueurs peuvent désormais <strong>improviser des conversations</strong>,
+          réagir aux choix du joueur et développer des relations qui évoluent. Les modèles comme
+          <strong>NVIDIA ACE</strong> et <strong>Microsoft Muse</strong> génèrent des dialogues
+          en temps réel, rendant chaque partie unique.
+        </div>
+        <span class="usage-example">Ex : PNJ autonomes — GDC 2025</span>
+      </div>
+      <div class="usage-card">
+        <div class="usage-icon">🎨</div>
+        <div class="usage-title">Génération d'assets visuels</div>
+        <div class="usage-desc">
+          Textures, modèles 3D, arrière-plans : des outils comme <strong>Scenario.gg</strong>,
+          <strong>Midjourney</strong> ou <strong>Promethean AI</strong> permettent de générer
+          des visuels de qualité professionnelle en quelques minutes, là où il fallait
+          auparavant des semaines de travail manuel.
+        </div>
+        <span class="usage-example">Ex : Scenario.gg, Promethean AI</span>
+      </div>
+      <div class="usage-card">
+        <div class="usage-icon">🗺️</div>
+        <div class="usage-title">Génération procédurale de mondes</div>
+        <div class="usage-desc">
+          L'IA étend la génération procédurale bien au-delà des terrains : environnements complets,
+          villes, objets, quêtes. Deux parties d'un même jeu peuvent proposer des
+          <strong>paysages totalement différents</strong>, renforçant l'immersion et la rejouabilité.
+        </div>
+        <span class="usage-example">Ex : Unity Muse, Unreal Engine IA</span>
+      </div>
+      <div class="usage-card">
+        <div class="usage-icon">⚙️</div>
+        <div class="usage-title">Assistance au développement</div>
+        <div class="usage-desc">
+          GitHub Copilot et d'autres assistants IA aident les développeurs à
+          <strong>écrire, déboguer et optimiser</strong> leur code. Un développeur indépendant peut
+          aujourd'hui générer un prototype jouable en quelques heures grâce à ces outils.
+          L'IA automatise aussi les tests qualité (QA).
+        </div>
+        <span class="usage-example">Ex : GitHub Copilot, Ludo.ai, Rosebud</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHIFFRES CLÉS -->
+  <div class="section fade-in">
+    <div class="section-label">02 — Chiffres clés</div>
+    <h2>L'IA en chiffres dans l'industrie</h2>
+    <div class="stats-band">
+      <div>
+        <div class="band-num">87%</div>
+        <div class="band-label">des développeurs utilisent l'IA au travail</div>
+        <div class="band-source">Google & Harris Poll — août 2025</div>
+      </div>
+      <div>
+        <div class="band-num">94%</div>
+        <div class="band-label">estiment que l'IA réduira les coûts à long terme</div>
+        <div class="band-source">Google & Harris Poll — août 2025</div>
+      </div>
+      <div>
+        <div class="band-num">7 818</div>
+        <div class="band-label">jeux sur Steam utilisant l'IA générative</div>
+        <div class="band-source">Totally Human Media — 2025</div>
+      </div>
+      <div>
+        <div class="band-num">63%</div>
+        <div class="band-label">inquiets sur les droits et licences des contenus IA</div>
+        <div class="band-source">Google & Harris Poll — août 2025</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OUTILS -->
+  <div class="section fade-in">
+    <div class="section-label">03 — Outils phares</div>
+    <h2>Les principaux outils IA pour les game devs</h2>
+    <p class="section-intro">
+      L'écosystème d'outils IA dédiés au jeu vidéo a explosé en 2025, couvrant toutes les spécialités du développement.
+    </p>
+    <div class="tools-grid">
+      <div class="tool-card">
+        <div class="tool-name">Unity Muse</div>
+        <div class="tool-category">Moteur / Code</div>
+        <div class="tool-desc">Assistant IA intégré à Unity pour générer du code, des assets et des comportements directement dans le moteur.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">NVIDIA ACE</div>
+        <div class="tool-category">PNJ / Dialogues</div>
+        <div class="tool-desc">Suite d'outils IA pour créer des PNJ capables de tenir des conversations naturelles en temps réel.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">Scenario.gg</div>
+        <div class="tool-category">Génération d'assets</div>
+        <div class="tool-desc">Génération d'images et de sprites cohérents avec la direction artistique du jeu grâce au fine-tuning.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">Promethean AI</div>
+        <div class="tool-category">Environnements 3D</div>
+        <div class="tool-desc">Automatise la création d'environnements 3D complexes à partir de simples descriptions textuelles.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">Ludo.ai</div>
+        <div class="tool-category">Game design</div>
+        <div class="tool-desc">Analyse le comportement des joueurs et adapte le gameplay pour offrir une expérience personnalisée.</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">GitHub Copilot</div>
+        <div class="tool-category">Aide au code</div>
+        <div class="tool-desc">Assistant de code IA utilisé par une majorité de développeurs pour accélérer l'écriture et le débogage.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DÉBAT -->
+  <div class="section fade-in">
+    <div class="section-label">04 — Débat</div>
+    <h2>Avantages et controverses</h2>
+    <p class="section-intro">
+      L'adoption massive de l'IA dans l'industrie du jeu vidéo suscite un débat profond,
+      entre <strong>gains de productivité réels</strong> et <strong>inquiétudes légitimes</strong>
+      sur l'emploi, la qualité et l'éthique.
+    </p>
+    <div class="debate-grid">
+      <div class="debate-col pro">
+        <div class="debate-head pro-color">▲ Avantages</div>
+        <div class="debate-item">Réduction drastique des coûts et des délais de production</div>
+        <div class="debate-item">Démocratisation du développement pour les studios indépendants</div>
+        <div class="debate-item">PNJ plus vivants, gameplay plus immersif et personnalisé</div>
+        <div class="debate-item">Automatisation des tâches répétitives (textures, QA, code boilerplate)</div>
+        <div class="debate-item">Génération de prototypes jouables en quelques heures</div>
+      </div>
+      <div class="debate-col con">
+        <div class="debate-head con-color">▼ Controverses</div>
+        <div class="debate-item">Licenciements massifs : 10% des développeurs ont perdu leur poste en 2025</div>
+        <div class="debate-item">Contenu « slop » : assets génériques, erreurs visuelles (ex : Call of Duty Black Ops 6)</div>
+        <div class="debate-item">Polémiques sur la transparence (Ubisoft, Activision — 2025)</div>
+        <div class="debate-item">Questions sur les droits d'auteur des données d'entraînement</div>
+        <div class="debate-item">Steam impose désormais la déclaration obligatoire de l'usage IA</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOURCES -->
+  <div class="section fade-in">
+    <div class="section-label">05 — Sources consultées</div>
+    <h2>Articles de veille</h2>
+    <div class="articles-list">
+
+      <div class="article-card">
+        <div class="article-date">Août 2025</div>
+        <div>
+          <div class="article-title">87% des développeurs utilisent l'IA — étude Google & Harris Poll</div>
+          <div class="article-summary">
+            Étude menée auprès de 615 développeurs dans le monde : <strong>87% utilisent l'IA</strong> au quotidien
+            pour automatiser les tâches lourdes. 94% estiment qu'elle réduira les coûts à long terme,
+            mais 63% s'inquiètent des questions de droits sur les contenus générés.
+          </div>
+        </div>
+        <div class="article-source">cnews.fr</div>
+      </div>
+
+      <div class="article-card">
+        <div class="article-date">Mars 2025</div>
+        <div>
+          <div class="article-title">GDC 2025 : la révolution des PNJ autonomes</div>
+          <div class="article-summary">
+            La Game Developers Conference 2025 a mis en lumière l'arrivée des <strong>premiers PNJ
+            véritablement autonomes</strong>. Des outils biométriques combinés à l'IA générative
+            permettent d'envisager des jeux ultra-personnalisés adaptés à l'état émotionnel du joueur.
+            La créativité humaine reste cependant au cœur de l'industrie.
+          </div>
+        </div>
+        <div class="article-source">kami-labs.fr</div>
+      </div>
+
+      <div class="article-card">
+        <div class="article-date">Nov. 2025</div>
+        <div>
+          <div class="article-title">20% des jeux Steam 2025 utilisent l'IA — rapport Totally Human Media</div>
+          <div class="article-summary">
+            En un an, le nombre de jeux sur Steam utilisant l'IA générative est passé de <strong>1 000
+            à 7 818 titres</strong>, soit une hausse de 700%. L'usage concerne principalement la génération
+            d'assets visuels. Steam exige désormais une déclaration explicite de l'usage de l'IA.
+          </div>
+        </div>
+        <div class="article-source">achievementindustry.com</div>
+      </div>
+
+      <div class="article-card">
+        <div class="article-date">Nov. 2025</div>
+        <div>
+          <div class="article-title">L'IA générative dans le jeu vidéo : grand craquage 2025</div>
+          <div class="article-summary">
+            Analyse de la crise de confiance entre joueurs et studios après plusieurs polémiques
+            (Call of Duty Black Ops 7, Anno 117 d'Ubisoft). <strong>10% des développeurs ont perdu
+            leur emploi</strong> en 2025. Le succès de Baldur's Gate 3 rappelle l'attachement du public
+            à la patte humaine et à l'artisanat.
+          </div>
+        </div>
+        <div class="article-source">gusandco.net</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CONCLUSION -->
+  <div class="section fade-in">
+    <div class="section-label">06 — Conclusion</div>
+    <h2>Synthèse et avis personnel</h2>
+    <div class="conclusion-box">
+      <div class="conclusion-label">// Synthèse</div>
+      <p class="conclusion-text">
+        L'IA est en train de redéfinir en profondeur le métier de développeur de jeux vidéo.
+        En 2025, elle n'est plus réservée aux grands studios : les outils se démocratisent,
+        et un développeur indépendant peut aujourd'hui rivaliser avec des productions bien
+        plus conséquentes en termes de contenu visuel.
+        <br/><br/>
+        Pour autant, l'IA reste un <strong>outil au service de l'idée</strong>. Les polémiques
+        de 2025 ont montré qu'un usage non maîtrisé ou non transparent dégrade la confiance
+        des joueurs. L'avenir appartient aux développeurs qui sauront combiner
+        <strong>créativité humaine et puissance des algorithmes</strong>, en restant
+        transparents sur leur usage de ces technologies.
+        <br/><br/>
+        En tant que futur développeur SLAM, il me paraît essentiel de me familiariser
+        avec ces outils dès maintenant — que ce soit GitHub Copilot au quotidien
+        ou des solutions de génération de contenu pour mes projets personnels.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  /* Génération de la grille pixel déco */
+  const grid = document.getElementById('pixelGrid');
+  if (grid) {
+    for (let i = 0; i < 64; i++) {
+      const d = document.createElement('div');
+      d.className = 'hero-pixel-dot';
+      grid.appendChild(d);
+    }
+  }
+
+  /* Scroll fade-in */
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+  /* Theme toggle */
+  (function() {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var head = document.head;
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.id  = 'theme-css-sub';
+    var saved = localStorage.getItem('portfolio-theme') || 'dark';
+    link.href = saved === 'dark' ? 'style-dark.css' : 'style-light.css';
+    head.appendChild(link);
+    btn.addEventListener('click', function() {
+      var cur = localStorage.getItem('portfolio-theme') || 'dark';
+      var next = cur === 'dark' ? 'light' : 'dark';
+      link.href = next === 'dark' ? 'style-dark.css' : 'style-light.css';
+      localStorage.setItem('portfolio-theme', next);
+      var fav = document.getElementById('favicon');
+      if (fav) fav.href = next === 'dark' ? 'favicon-dark.svg' : 'favicon-light.svg';
+    });
+  })();
+</script>
+</body>
+</html>
