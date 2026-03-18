@@ -245,10 +245,11 @@ footer {
 .cr-overlay.active { display: block; }
 
 .cr-card {
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -48%) scale(0.96);
+  transform: translate(-50%, -50%) scale(0.96);
   z-index: 201;
   width: min(500px, 90vw);
   max-height: 85vh;
@@ -260,9 +261,10 @@ footer {
   padding: 1.8rem;
   opacity: 0;
   pointer-events: none;
-  transition: all 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 .cr-card.active {
+  display: block;
   opacity: 1;
   pointer-events: all;
   transform: translate(-50%, -50%) scale(1);
