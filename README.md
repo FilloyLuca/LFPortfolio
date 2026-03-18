@@ -1,77 +1,103 @@
-# 💼 Portfolio - Luca Filloy
+# 🚀 Portfolio - Luca Filloy
 
-Bienvenue sur mon portfolio en ligne 🚀  
-Ce site présente mon parcours, mes compétences et mes réalisations dans le cadre de mon BTS SIO SLAM.
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-En%20ligne-success?style=for-the-badge">
+  <img src="https://img.shields.io/badge/BTS%20SIO-SLAM-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/HTML-CSS-JS-orange?style=for-the-badge">
+</p>
 
-🔗 **Accéder au site :**  
-https://filloyluca.github.io/
-
----
-
-## 🧑‍💻 À propos
-
-Je suis étudiant en **BTS SIO option SLAM (Solutions Logicielles et Applications Métiers)**, passionné par le développement web et les nouvelles technologies.
-
-Ce portfolio a pour objectif de présenter :
-- Mes compétences techniques
-- Mes projets
-- Mes stages
-- Ma veille technologique
+<p align="center">
+  💼 <strong>Portfolio professionnel</strong> développé dans le cadre de mon BTS SIO SLAM  
+</p>
 
 ---
 
-## 🛠️ Technologies utilisées
+## 🌐 Accès au site
 
-- HTML5
-- CSS3
-- JavaScript
-- Git & GitHub
+👉 **Voir le portfolio en ligne :**  
+🔗 https://filloyluca.github.io/
 
 ---
 
-## 📂 Contenu du site
+## 🧑‍💻 À propos de moi
 
-- 🏠 Accueil
-- 📁 Projets
-- 🏢 Stages (Stage 1 & Stage 2)
-- 📄 CV (consultation et téléchargement)
-- 🤖 Veille technologique (IA dans le jeu vidéo)
-- 📬 Contact
+🎓 Étudiant en **BTS SIO - option SLAM**  
+💡 Passionné par le **développement web** et les **nouvelles technologies**  
+🚀 Objectif : devenir développeur full-stack
+
+Ce portfolio a été conçu pour présenter :
+- mes compétences techniques
+- mes projets réalisés
+- mes expériences en stage
+- ma veille technologique
+
+---
+
+## 🛠️ Stack technique
+
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="50">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="50">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="50">
+</p>
+
+---
+
+## 📂 Structure du portfolio
+📁 Portfolio
+├── index.html
+├── style.css
+├── 📁 cv
+├── 📁 images
+├── 📄 pages projets
+├── 📄 pages stages
+└── 📄 veille technologique (IA jeux vidéo)
+
+
+---
+
+## ✨ Fonctionnalités
+
+✅ Design moderne et responsive  
+✅ Navigation fluide  
+✅ Présentation des stages (Stage 1 & Stage 2)  
+✅ Consultation et téléchargement du CV  
+✅ Veille technologique sur l’IA dans le jeu vidéo  
+✅ Animations (scroll & effets visuels)
 
 ---
 
 ## 📄 CV
 
-Mon CV est disponible directement sur le site :
-- Consultation en ligne
-- Téléchargement en PDF
+📥 Disponible directement sur le site :
+- 👀 Consultation en ligne
+- ⬇️ Téléchargement PDF
 
 ---
 
 ## 🚀 Déploiement
 
-Ce site est hébergé avec **GitHub Pages**.
+Projet hébergé avec **GitHub Pages**
 
 ---
 
-## 📬 Contact
+## 📬 Me contacter
 
-- GitHub : https://github.com/lucafilloy  
-- LinkedIn : https://www.linkedin.com/in/luca-filloy-222b61349/  
-- Email : filloylucapro@gmail.com  
+<p align="center">
+  <a href="https://github.com/lucafilloy">
+    <img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github">
+  </a>
+  <a href="https://www.linkedin.com/in/luca-filloy-222b61349/">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin">
+  </a>
+  <a href="mailto:filloylucapro@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail">
+  </a>
+</p>
 
 ---
 
-## 📌 Améliorations futures
-
-- Ajout de nouveaux projets
-- Amélioration du design UI/UX
-- Ajout d’animations
-- Optimisation mobile
-
----
-
-## ⭐ Remerciements
-
-Merci pour votre visite !
-N’hésitez pas à consulter mes projets et à me contacter.
+<p align="center">
+  🔥 Merci pour ta visite !
+</p>
