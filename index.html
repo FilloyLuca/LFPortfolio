@@ -164,14 +164,26 @@
       <span class="project-link">Voir le projet &rarr;</span>
     </div>
 
-    <div class="project-card fade-in" onclick="openModal('modal-api')" style="cursor:pointer;">
-      <div class="project-year">2024 - Projet personnel</div>
-      <h3 class="project-name">API REST de gestion utilisateurs</h3>
-      <p class="project-desc">API RESTful securisee avec JWT, gestion des roles, documentation Swagger. Deployee sur VPS Linux.</p>
+   <div class="project-card fade-in" onclick="openModal('modal-savapp')" style="cursor:pointer;"> 
+      <div class="project-year">2026 - Projet BTS</div>
+      
+      <h3 class="project-name">SavApp - Calculateur de saponification</h3> 
+      
+      <p class="project-desc">
+        Application web permettant de calculer la composition de savons en saponification à froid.
+        Basée sur une API REST en Kotlin/Spring Boot et une interface Angular, elle intègre des
+        calculs métier complexes liés aux propriétés des corps gras.
+      </p>
+      
       <div class="project-tags">
-        <span class="tag">Node.js</span><span class="tag">Express</span>
-        <span class="tag">JWT</span><span class="tag purple">REST API</span>
+        <span class="tag">Kotlin</span>
+        <span class="tag">Spring Boot</span>
+        <span class="tag">Angular</span>
+        <span class="tag">MariaDB</span>
+        <span class="tag purple">API REST</span>
+        <span class="tag purple">Calcul métier</span>
       </div>
+      
       <span class="project-link">Voir le projet &rarr;</span>
     </div>
 
@@ -240,7 +252,7 @@
   </div>
 </div>
 
-<!-- Modal : MonstersWeb -->
+<!-- Modal 2 : MonstersWeb -->
 <div class="project-modal" id="modal-monstersweb">
   <button class="modal-close" onclick="closeModal()">&times;</button>
   <div class="modal-inner">
@@ -297,46 +309,72 @@
   </div>
 </div>
 
-<!-- Modal 3 : API REST -->
-<div class="project-modal" id="modal-api">
+<!-- Modal : SavApp -->
+<div class="project-modal" id="modal-savapp">
   <button class="modal-close" onclick="closeModal()">&times;</button>
   <div class="modal-inner">
+    
     <div class="modal-left">
-      <div class="modal-eyebrow">2024 &mdash; Projet personnel</div>
-      <h2 class="modal-title">API REST de gestion utilisateurs</h2>
+      <div class="modal-eyebrow">2024 &mdash; Projet BTS</div>
+      
+      <h2 class="modal-title">SavApp - Calculateur de saponification</h2>
+      
       <p class="modal-desc">
-        Developpement d'une <strong>API RESTful</strong> complete avec authentification
-        <strong>JWT</strong> (JSON Web Token). Le systeme gere plusieurs niveaux de roles
-        utilisateurs avec des droits d'acces differencies.
+        Développement d’une application web permettant de calculer la composition de savons
+        en <strong>saponification à froid (SaF)</strong>. Le projet repose sur des
+        <strong>algorithmes métier</strong> intégrant les indices de saponification,
+        le surgraissage et les propriétés des corps gras.
       </p>
+      
       <p class="modal-desc">
-        L'API est entierement documentee via <strong>Swagger</strong>, ce qui permet une prise en
-        main rapide par d'autres developpeurs. Deployee sur un serveur VPS Linux avec
-        gestion des variables d'environnement securisees.
+        L’application fonctionne avec une <strong>API REST externe</strong> permettant de gérer
+        les <strong>ingrédients, utilisateurs et données métier</strong>. Cette API,
+        développée en <strong>Kotlin avec Spring Boot</strong>, est essentielle au bon
+        fonctionnement du calculateur.
       </p>
+
       <div class="modal-tags">
-        <span class="tag">Node.js</span><span class="tag">Express</span>
-        <span class="tag">JWT</span><span class="tag purple">REST API</span>
-        <span class="tag purple">Swagger</span>
+        <span class="tag">Kotlin</span>
+        <span class="tag">Spring Boot</span>
+        <span class="tag">Angular</span>
+        <span class="tag">MariaDB</span>
+        <span class="tag purple">API REST</span>
+        <span class="tag purple">Calcul métier</span>
       </div>
-      <a href="#" class="modal-github-btn" target="_blank" rel="noopener">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="18"/>
-        Voir sur GitHub
+
+      <!-- Bouton principal projet -->
+      <a href="https://github.com/FilloyLuca/sav-app" class="modal-github-btn" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="18"/>
+        Voir le projet
       </a>
+
+      <!-- Boutons API -->
+      <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="https://github.com/FilloyLuca/SavonAPI" target="_blank" class="modal-github-btn">
+          API Savon (perso)
+        </a>
+        <a href="https://github.com/Timomoulin/SavonAPI3" target="_blank" class="modal-github-btn">
+          API Savon (prof)
+        </a>
+      </div>
+
     </div>
+
     <div class="modal-right">
       <div class="modal-preview">
-        <div class="modal-preview-icon">&#128279;</div>
-        <div class="modal-preview-label">API REST</div>
+        <div class="modal-preview-icon">&#129514;</div>
+        <div class="modal-preview-label">SavApp</div>
+        
         <div class="modal-features">
-          <div class="modal-feature"><span class="feature-dot"></span>Authentification JWT</div>
-          <div class="modal-feature"><span class="feature-dot"></span>Gestion des roles</div>
-          <div class="modal-feature"><span class="feature-dot"></span>Documentation Swagger</div>
-          <div class="modal-feature"><span class="feature-dot"></span>Deploiement VPS Linux</div>
-          <div class="modal-feature"><span class="feature-dot"></span>Variables env securisees</div>
+          <div class="modal-feature"><span class="feature-dot"></span>Calcul saponification</div>
+          <div class="modal-feature"><span class="feature-dot"></span>Gestion des ingrédients</div>
+          <div class="modal-feature"><span class="feature-dot"></span>API REST externe</div>
+          <div class="modal-feature"><span class="feature-dot"></span>Interface Angular</div>
+          <div class="modal-feature"><span class="feature-dot"></span>Architecture full-stack</div>
         </div>
       </div>
     </div>
+
   </div>
 </div>
 
