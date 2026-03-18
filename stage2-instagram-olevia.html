@@ -284,6 +284,7 @@ mentions_uniques = <span class="fn">list</span>(<span class="fn">set</span>(ment
 
 <footer>
   <span class="footer-copy">2025 - Luca Filloy - BTS SIO SLAM</span>
+  <button id="fire-egg" aria-label="easter egg">🔥</button>
   <div class="footer-links">
     <a href="https://github.com/lucafilloy" target="_blank">GitHub</a>
     <a href="https://www.linkedin.com/in/luca-filloy-222b61349/" target="_blank">LinkedIn</a>
@@ -327,6 +328,60 @@ mentions_uniques = <span class="fn">list</span>(<span class="fn">set</span>(ment
     document.getElementById('cr-card').classList.remove('active');
     document.getElementById('cr-overlay').classList.remove('active');
   }
+
+  /* ── EASTER EGG 🔥 ── */
+  const fireBtn = document.getElementById('fire-egg');
+  let fireInterval = null;
+  let lavaInterval = null;
+
+  const EMOJIS = ['🔥','🔥','🔥','🔥','💥','🌋','✨','💫','🔴','🟠'];
+  const CRACKS = ['🌋','🔥','💥'];
+
+  function spawnFlame() {
+    const el = document.createElement('span');
+    el.className = 'fire-particle';
+    el.textContent = EMOJIS[Math.floor(Math.random() * EMOJIS.length)];
+    el.style.left   = Math.random() * 100 + 'vw';
+    el.style.fontSize = (0.8 + Math.random() * 1.8) + 'rem';
+    el.style.setProperty('--dur', (1.5 + Math.random() * 2) + 's');
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 3500);
+  }
+
+  function spawnCrack() {
+    const el = document.createElement('span');
+    el.className = 'lava-crack';
+    el.textContent = CRACKS[Math.floor(Math.random() * CRACKS.length)];
+    el.style.left = Math.random() * 95 + 'vw';
+    el.style.fontSize = (1.5 + Math.random() * 2) + 'rem';
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 1200);
+  }
+
+  function ignite() {
+    document.body.classList.add('on-fire');
+    fireBtn.textContent = '🧯';
+    fireInterval = setInterval(spawnFlame, 180);
+    lavaInterval = setInterval(spawnCrack, 400);
+    localStorage.setItem('on-fire', 'true');
+  }
+
+  function extinguish() {
+    document.body.classList.remove('on-fire');
+    fireBtn.textContent = '🔥';
+    clearInterval(fireInterval);
+    clearInterval(lavaInterval);
+    fireInterval = null;
+    lavaInterval = null;
+    document.querySelectorAll('.fire-particle, .lava-crack').forEach(el => el.remove());
+    localStorage.setItem('on-fire', 'false');
+  }
+
+  fireBtn.addEventListener('click', function() {
+    document.body.classList.contains('on-fire') ? extinguish() : ignite();
+  });
+
+  if (localStorage.getItem('on-fire') === 'true') ignite();
 </script>
 </body>
 </html>

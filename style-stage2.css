@@ -287,3 +287,153 @@ footer {
   gap: 0.8rem;
   flex-wrap: wrap;
 }
+
+/* ── EASTER EGG ── */
+#fire-egg {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  padding: 0;
+}
+#fire-egg:hover { opacity: 1; }
+
+/* ── MODE FEU ── */
+body.on-fire {
+  animation: fireShake 0.06s infinite alternate;
+}
+
+/* Vignette lave sur les bords */
+body.on-fire::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 996;
+  background:
+    radial-gradient(ellipse at 0% 100%,   rgba(255,40,0,0.55)  0%, transparent 45%),
+    radial-gradient(ellipse at 100% 100%, rgba(255,100,0,0.5)  0%, transparent 45%),
+    radial-gradient(ellipse at 50% 100%,  rgba(255,20,0,0.4)   0%, transparent 40%),
+    radial-gradient(ellipse at 0% 50%,    rgba(200,30,0,0.25)  0%, transparent 35%),
+    radial-gradient(ellipse at 100% 50%,  rgba(200,30,0,0.25)  0%, transparent 35%),
+    radial-gradient(ellipse at 50% 0%,    rgba(255,60,0,0.15)  0%, transparent 40%);
+  animation: lavaFlicker 0.1s infinite alternate;
+  mix-blend-mode: screen;
+}
+
+/* Voile rouge général */
+body.on-fire::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 995;
+  background: rgba(180, 20, 0, 0.12);
+  animation: fireFlicker 0.2s infinite alternate;
+}
+
+body.on-fire nav {
+  background: rgba(60,5,0,0.95) !important;
+  border-bottom: 1px solid rgba(255,80,0,0.6) !important;
+  box-shadow: 0 2px 30px rgba(255,50,0,0.3) !important;
+}
+
+body.on-fire footer {
+  border-top-color: rgba(255,80,0,0.4) !important;
+  background: rgba(40,5,0,0.5) !important;
+}
+
+body.on-fire .project-card,
+body.on-fire .veille-card,
+body.on-fire .usage-card,
+body.on-fire .tool-card {
+  border-color: rgba(255,80,0,0.45) !important;
+  box-shadow: 0 0 20px rgba(255,50,0,0.15), inset 0 0 30px rgba(255,30,0,0.04) !important;
+}
+body.on-fire .project-card:hover,
+body.on-fire .veille-card:hover,
+body.on-fire .usage-card:hover {
+  border-color: rgba(255,140,0,0.8) !important;
+  box-shadow: 0 0 40px rgba(255,80,0,0.4) !important;
+}
+
+body.on-fire .section-num,
+body.on-fire .nav-logo,
+body.on-fire .hero-badge,
+body.on-fire .hero-eyebrow {
+  color: #ff5500 !important;
+}
+
+body.on-fire .btn-primary {
+  background: linear-gradient(135deg, #ff2200, #ff7700) !important;
+  box-shadow: 0 0 30px rgba(255,60,0,0.6) !important;
+  animation: btnPulse 0.5s infinite alternate;
+}
+
+body.on-fire .tag,
+body.on-fire .tech-tag,
+body.on-fire .meta-pill {
+  border-color: rgba(255,80,0,0.5) !important;
+  color: #ff8844 !important;
+  background: rgba(255,50,0,0.1) !important;
+}
+
+body.on-fire .section-line,
+body.on-fire .section-label::after {
+  background: linear-gradient(90deg, #ff4400, transparent) !important;
+}
+
+/* Scrollbar en lave */
+body.on-fire ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff4400, #ff0000) !important;
+  box-shadow: 0 0 8px rgba(255,50,0,0.8) !important;
+}
+
+@keyframes fireShake {
+  0%   { transform: translateX(-1px) rotate(-0.3deg) skewX(-0.2deg); }
+  100% { transform: translateX(1px)  rotate(0.3deg)  skewX(0.2deg); }
+}
+@keyframes lavaFlicker {
+  0%   { opacity: 0.7; transform: scaleY(1); }
+  100% { opacity: 1;   transform: scaleY(1.02); }
+}
+@keyframes fireFlicker {
+  from { opacity: 0.8; }
+  to   { opacity: 1; }
+}
+@keyframes btnPulse {
+  from { box-shadow: 0 0 20px rgba(255,60,0,0.5); }
+  to   { box-shadow: 0 0 50px rgba(255,100,0,0.9); }
+}
+
+/* Particules */
+.fire-particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 997;
+  animation: floatUp var(--dur) ease-in forwards;
+  bottom: 0;
+  user-select: none;
+}
+@keyframes floatUp {
+  0%   { opacity: 1;   transform: translateY(0)     scale(1)    rotate(0deg); }
+  50%  { opacity: 0.8; transform: translateY(-40vh) scale(0.8)  rotate(10deg); }
+  100% { opacity: 0;   transform: translateY(-90vh) scale(0.3)  rotate(25deg); }
+}
+
+/* Cracks de lave en bas */
+.lava-crack {
+  position: fixed;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 996;
+  font-size: 2rem;
+  animation: crackGlow 0.3s infinite alternate;
+  filter: drop-shadow(0 0 8px #ff4400);
+}
+@keyframes crackGlow {
+  from { filter: drop-shadow(0 0 6px #ff2200);  opacity: 0.7; }
+  to   { filter: drop-shadow(0 0 18px #ff8800); opacity: 1; }
+}
