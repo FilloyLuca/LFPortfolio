@@ -54,3 +54,15 @@ body::before { opacity: 0.25; }
 .skill-icon-item img[alt="Linux"] {
   filter: invert(0.4) sepia(0.3) saturate(0.8);
 }
+
+.tag {
+  background: rgba(181, 96, 26, 0.15) !important;
+  color: #9a4010 !important;
+  border: 1px solid rgba(181, 96, 26, 0.5) !important;
+}
+
+.tag.purple {
+  background: rgba(234, 88, 12, 0.12) !important;
+  color: #c2410c !important;
+  border: 1px solid rgba(234, 88, 12, 0.5) !important;
+}
