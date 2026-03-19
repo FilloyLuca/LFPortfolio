@@ -81,7 +81,8 @@
     .section-intro { color: #9999b8; font-size: 0.97rem; margin-bottom: 1.8rem; max-width: 700px; line-height: 1.75; }
     .section-intro strong { color: var(--text); }
     p { color: #9999b8; font-size: 0.95rem; margin-bottom: 0.9rem; line-height: 1.75; }
-    p strong { color: var(--text); }
+    /* p strong { color: var(--text); } */
+    p strong { font-family: 'Oxanium', sans-serif; font-weight: 700; }
 
     /* ── USAGES GRID ── */
     .usages-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }

@@ -80,7 +80,8 @@
     h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 1.4rem; }
     h3 { font-size: 1rem; font-weight: 700; color: var(--accent); margin: 1.6rem 0 0.6rem; font-family: var(--mono); letter-spacing: 0.05em; }
     p { color: #9999b8; font-size: 0.97rem; margin-bottom: 1rem; }
-    p strong { color: var(--text); }
+    /* p strong { color: var(--text); } */
+    p strong { font-family: 'Oxanium', sans-serif; font-weight: 700; }
 
     /* ARCHITECTURE DIAGRAM */
     .arch-flow {
