@@ -459,7 +459,7 @@ section {
   padding: 1.8rem;
   transition: border-color 0.2s, background 0.35s;
 }
-.veille-card:hover { border-color: rgba(181,96,26,0.4); }
+.veille-card:hover { border-color: var(--accent); }
 .veille-date {
   font-family: var(--mono);
   font-size: 0.68rem;
